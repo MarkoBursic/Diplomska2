@@ -1,0 +1,46 @@
+\select@language {slovene}
+\contentsline {chapter}{\numberline {1}Uvod}{5}
+\contentsline {chapter}{\numberline {2}Dajalniki pozicije}{7}
+\contentsline {section}{\numberline {2.1}Hall senzor}{7}
+\contentsline {section}{\numberline {2.2}Resolver}{9}
+\contentsline {section}{\numberline {2.3}Opti\IeC {\v c}ni inkrementalni dajalnik}{13}
+\contentsline {subsection}{\numberline {2.3.1}Meritev hitrosti z inkrementalnim dajalnikom}{15}
+\contentsline {subsubsection}{\numberline {2.3.1.1}Metoda merjenje frekvence}{16}
+\contentsline {subsubsection}{\numberline {2.3.1.2}Metoda merjenje periode}{17}
+\contentsline {subsubsection}{\numberline {2.3.1.3}Kombinirana metoda merjenja frekvence in periode}{17}
+\contentsline {subsection}{\numberline {2.3.2}Sin/Cos inkrementalni dajalnik }{18}
+\contentsline {section}{\numberline {2.4}Absolutni opti\IeC {\v c}ni dajalnik}{19}
+\contentsline {section}{\numberline {2.5}Ve\IeC {\v c}obratni \IeC {\v s}tevec}{20}
+\contentsline {chapter}{\numberline {3}Elektri\IeC {\v c}ni stroji}{23}
+\contentsline {section}{\numberline {3.1}Enosmerni kolektorski motor s tujim vzbujanjem}{24}
+\contentsline {section}{\numberline {3.2}Enosmerni brezkrta\IeC {\v c}ni motor - BLDC}{28}
+\contentsline {section}{\numberline {3.3}Sinhronski motor s trajnimi magneti}{28}
+\contentsline {subsection}{\numberline {3.3.1}Orientacija polja}{28}
+\contentsline {subsubsection}{\numberline {3.3.1.1}Prostorski vektor}{28}
+\contentsline {subsubsection}{\numberline {3.3.1.2}Clarkina preslikava $(a,b,c)\rightarrow \alpha ,\beta $}{29}
+\contentsline {subsubsection}{\numberline {3.3.1.3}Parkova preslikava}{30}
+\contentsline {subsubsection}{\numberline {3.3.1.4}Inverzna Parkova in Clarkina preslikava}{32}
+\contentsline {section}{\numberline {3.4}Asinhronski motor}{33}
+\contentsline {subsubsection}{\numberline {3.4.0.1}Krmiljenje z U/f karakteristiko }{34}
+\contentsline {subsubsection}{\numberline {3.4.0.2}Vektroski na\IeC {\v c}in krmiljenja}{34}
+\contentsline {subsubsection}{\numberline {3.4.0.3}Tehnika 87Hz}{34}
+\contentsline {subsubsection}{\numberline {3.4.0.4}Pogoste te\IeC {\v z}ave frekven\IeC {\v c}nih pretvornikov}{34}
+\contentsline {chapter}{\numberline {4}Mehanska prilagoditev stroja}{37}
+\contentsline {subsection}{\numberline {4.0.1}Mehanska resonanca in anti-resonanca}{38}
+\contentsline {chapter}{\numberline {5}Teorija regulacij in krmiljenja}{41}
+\contentsline {subsection}{\numberline {5.0.1}Kaskadni regulacijski krog}{44}
+\contentsline {subsection}{\numberline {5.0.2}Vodena regulacija}{46}
+\contentsline {subsection}{\numberline {5.0.3}Digitalni regulator}{46}
+\contentsline {subsection}{\numberline {5.0.4}Implementacija digitalnega PID regulatorja}{48}
+\contentsline {subsection}{\numberline {5.0.5}Optimiranje regulatorja po Zieglerju in Nicholsu}{49}
+\contentsline {subsection}{\numberline {5.0.6}Generator trajektorije}{50}
+\contentsline {chapter}{\numberline {6}Prakti\IeC {\v c}na realizacija krmiljenja pomika in odreza \IeC {\v z}age s Simotion/Sinamics}{55}
+\contentsline {subsection}{\numberline {6.0.1}Uvod}{55}
+\contentsline {subsection}{\numberline {6.0.2}Izbira motorjev}{56}
+\contentsline {subsection}{\numberline {6.0.3}Napajalni modul}{58}
+\contentsline {subsection}{\numberline {6.0.4}Valji pomika deske}{59}
+\contentsline {subsection}{\numberline {6.0.5}Pozicijska zanka}{60}
+\contentsline {subsection}{\numberline {6.0.6}Hitrostna zanka}{60}
+\contentsline {subsection}{\numberline {6.0.7}Momentna zanka}{60}
+\contentsline {chapter}{\numberline {7}primeri latex}{65}
+\contentsline {chapter}{\numberline {A}Primer kode PID regulatorja}{71}

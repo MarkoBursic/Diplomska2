@@ -1,0 +1,15 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdftex 2016.3.11)  11 MAR 2016 15:36
+entering extended mode
+**C:/Users/Marko/Documents/Diploma/predloga/Diploma_LATEX/UNI-LJ-FE-Diploma.sty
+
+(C:/Users/Marko/Documents/Diploma/predloga/Diploma_LATEX/UNI-LJ-FE-Diploma.sty
+! Undefined control sequence.
+l.1 \typeout
+            {}
+? 
+! Emergency stop.
+l.1 \typeout
+            {}
+End of file on the terminal!
+
+!  ==> Fatal error occurred, no output PDF file produced!

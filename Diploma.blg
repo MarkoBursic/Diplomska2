@@ -1,0 +1,22 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: Diploma.aux
+The style file: ieeetrslo.bst
+Database file #1: literatura.bib
+I was expecting a `,' or a `}'---line 98 of file literatura.bib
+ : 
+ : @phdthesis{yumrukccal2013dynamic,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 112 of file literatura.bib
+ : 
+ : @book{ambrovzivc1996sodobne,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Illegal end of database file---line 131 of file literatura.bib
+ : }
+ :  
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "miklavvcivc2010objavljanje"
+Warning--empty journal in vcurkovivcmeritev
+Warning--empty year in vcurkovivcmeritev
+Warning--empty year in temperature3sendix
+(There were 3 error messages)

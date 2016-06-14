@@ -1,0 +1,469 @@
+% !TeX spellcheck = de_DE
+%
+
+\documentclass[a4paper,twoside,openright,12pt]{book}
+\usepackage[utf8]{inputenc}  %Kodna stran za Windows okolje, za linux je kodna stran latin2
+\usepackage[slovene]{babel}    % pravila za slovensko deljenje besed
+\usepackage{tikz}
+\usetikzlibrary{tikzmark}
+\usetikzlibrary{shapes,arrows,positioning,calc,babel}
+\usepackage[europeanresistors]{circuitikz}
+\usepackage{graphicx}
+\usepackage{psfrag}
+\usepackage{epstopdf}
+\epstopdfsetup{update}
+\usepackage[pdftex]{UNI-LJ-FE-Diploma} %Stil za diplome na Fakulteti za elektrotehniko (za pdfTeX v MkiTex)
+\usepackage{MojiBloki}
+%\usepackage[pctex]{UNI-LJ-FE-Diploma} %Stil za diplome na Fakulteti za elektrotehniko  (za pcTex)
+\usepackage{pgfplots}
+\usepackage{subfigure} 
+\usepackage{verbatim}
+\usepackage{transparent}
+\usepackage{tikz-timing}
+\usetikztiminglibrary[rising arrows]{clockarrows}
+\usetikztiminglibrary{arrows}
+\usepackage{makecell}%
+\usetikzlibrary{babel}
+\usepackage{setspace}
+
+%*************************** PRILAGODITVE *****************************
+% mapa s slikami
+\potgrafike{./Slike/}
+\graphicspath{./Slike/}
+%prilagoditev levega roba sodih strani. če se pri dvostranskem tisku robovi ne umemajo se lahko poveča ali pomanjča
+\zamaknirobsodihstrani{0mm}
+
+%*************************** NASLOVNA STRAN *****************************
+\naslov{Navodila in predloga za izdelavo diplomskega in magistrskega dela}
+\avtor{Marko Buršić} \univerza{Univerza v Ljubljani}
+\fakulteta{Fakulteta za elektrotehniko}
+\delo{Diplomsko delo}
+%\delo{Diplomsko delo visokočolskega strokovnega čtudija}
+\date{Ljubljana, 2016}
+\mentor{prof. dr. Damijan Miljavec}
+%\somentor{prof. dr. Ime Priimek}
+\begin{document}
+\graphicspath{{./slike/}}
+%------------------------ ZAčETNI DEL -----------------------------------
+\frontmatter
+%------------------------------------------------------------------------
+%
+%************************ NASLOVNA STRAN ********************************
+
+\maketitle
+
+
+%*************************** ZAHVALA ************************************
+\zahvala V zahvali se kandidati zahvali mentorju in poimensko tudi
+vsem sodelavcem in prijateljem, ki so pomagali in prispevali pri
+delu v laboratoriju, na računalniku, v delavnici, pri tehnični
+izdelavi dela in drugje.
+
+
+
+
+
+
+
+
+%*************************** VSEBINA *************************************
+\tableofcontents
+
+%*************************** SEZNAM SLIK in TABEL  ***********************
+\seznamslik
+\seznamtabel
+
+%***************************  SEZNAM UPORABLJENIH SIMBOLOV  **************
+
+\seznamsimbolov
+
+V pričujočem zaključnem delu so uporabljeni naslednje veličine in
+simboli:
+
+\begin{table}[h]
+\centering
+%\begin{footnotesize}
+\begin{tabular}{l l l l}
+ \hline \multicolumn{2}{c}{\bf{Veličina / oznaka}} & \multicolumn{2}{c}{\bf{Enota}}  \\
+ \hline
+Ime & Simbol & Ime & Simbol \\
+ \hline
+ čas & $t$  & sekunda & s \\
+ frekvenca & $f$  & Hertz & Hz \\
+ obodna hitrost & $\omega$ & - & rad/s\\
+ hitrost	& $v$ & - & m/s\\
+ kotni pospešek & $\alpha$ & - & rad/s$^2$ \\
+ linearni pospešek & $a$ & - & m/s$^2$ \\
+ sila & $F$ & Newton & N\\
+ masa   & $m$  & kilogram & kg \\
+ moment   & $M$  & Newtonmeter & Nm\\
+ vztrajnostni moment & $J$ & - & kgm$^2$ \\
+ napestost & $U$ & Volt  & V \\
+ tok	& $I$	&	Ampere & A\\
+ upornost & $R$ & Ohm  & $\Omega$ \\
+ prevodnost & $G$ & Siemens & S \\
+ induktivnost & $L$ & Henry & H\\
+ kapacitivnost & $C$ & Farad & F \\
+ gostota magnetnega pretoka   & $B$  & Tesla & T\\
+ jakost magnetnega polja   & $H$  & - & A/m\\
+ nekaj   & $ $  & - & -\\
+  \hline
+\end{tabular}
+%\end{footnotesize}
+  \caption{Veličine in simboli}
+  \label{prebojne_trdnosti}
+\end{table}
+
+Pri čemer so vektorji in matrike napisani s poudarjeno pisavo.
+Natančnejči pomen simbolov in njihovih indeksov je razviden iz
+ustreznih slik ali pa je pojasnjen v spremljajočem besedilu, kjer je
+simbol uporabljen.
+
+
+%------------------------ GLAVNI DEL ------------------------------------
+\mainmatter
+%-------------------------------------------------------------------------
+
+
+%********************* POVZETEK V SLOVENččINI ****************************
+\povzetek
+
+V pričujočem delu so predstavljena navodila za izdelavo zaključnega
+dela na Fakulteti za elektrotehniko v Ljubljani. Zaključno delo
+predstavlja diplomsko delo na prvi stopnji ter magistrsko delo na
+drugi stopnji izobračevalnega programa.
+
+V povzetku v slovenččini in v angleččini kandidat navede glavne
+rezultate dela, zato naj povzetek seznani bralca z jedrom dela na
+način, ki je običajen za pisanje krajčih člankov ali referatov.
+Obseg povzetka je za Repozitorij Univerze v Ljubljani omejen na tisoč
+znakov.
+
+Povzetek se naj prične z opisom in definicijo problema. Nadaljuje se
+naj z opisom uporabljenih metod in postopkov, ki so privedli do
+rečitve. Na koncu naj bodo opisani rezultati dela in glavni zaključki, ki iz rezultatov
+izhajajo.
+
+Za tem se na isti strani navede če ključne besede v slovenččini in v
+tujem jeziku.
+
+\kljucnebesede beseda1, beseda2, beseda3
+
+
+%*************************** POVZETEK V ANGLEččINI ***********************
+\abstract
+
+The thesis addresses ...
+
+\keywords word1, word2, word3
+
+
+%***************************** UVOD **************************************
+\chapter{Uvod} \label{uvod}
+
+Uvod v zaključno delo ima namen, da uvede bralca v tematiko
+zaključnega dela. V njem kandidat razčleni zahteve in cilje
+zaključnega dela, po literaturi povzame znane rečitve in oceni
+njihov pomen za zaključno delo. Sklicevanje na literaturo se v
+besedilu označi s čtevilko v oglatem oklepaju, ki jo ima ta v
+seznamu uporabljenih virov, in po potrebi navede strani, npr.
+\cite{miklavvcivc2010objavljanje} 
+%*********************** OSREDNJA POGLAVJA ********************************
+
+
+\chapter{Dajalniki pozicije} \label{Dajalniki pozicije in hitrosti}
+
+Hall-ov pojav je posledica toka skozi prevodnik, ki se nahaja v magnetnem polju. Slika \ref{Hall_element.jpg} prikazuje tanek sloj prevodnika (Hall element) skozi katerega teče tok v smeri x-osi. Priključne sponke izhodnega signala se nahajajo na obeh robovih elementa na y-osi,  zunanje magnetno polje pa deluje v smeri z-osi. V kolikor zunanje magnetno polje ni prisotno, se elektroni pomikajo vzdolž x-osi v ravni smeri in na izhodnih sponkah ni zaznati razlike napetosti. V primeru prisotnosti zunanjega magnetnega polja, ki je pravokotno na smer gibanja elektronov le-ti občutijo t.i. Lorenz-ovo silo, ki povroča ukrivljanje smeri tako, da se na eni strani nabirajo elektroni, na drugi pa vrzeli in tako je možno izmeriti napetost  $V_H$ , kot razliko v potencialu med obemi robovi elementa. \cite{manual-Honeywell}
+
+Napetost $V_H$ je premosorazmerna produktu toka skozi element in gostoto magnetnega pretoka.
+
+Hall sensorje odlikuje jih velika robustnost, hitra odzivnost ter nizka cena zato imajo veliko uporabo v industrijski elektroniki, kot naprimer tokovni merilniki, senzorji prisotnosti,...itd v brezkrtačnih enosmernih motorjih se jih uporablja kot absolutne dajalnike pozicije rotorja, v absolutnih dajalnikih pozicije pa kot dekodirniki števca obratov. V nadaljevanju se bomo osredotočili le na uporabo senzorjev kjer nas analogna vrednost gostote magnetnega pretoka ne zanima, pač pa samo pristonost le-tega. V ta namen je potrebno preoblikovati  izhodno napetost  $\textbf{\textit{V}}_H$ v digitalen signal.
+Na sliki \ref{HALL_DIG.JPG} je prikazana zgradba senzorja z digitalnim izhodom vklopljeno/izklopljeno. Diferencialna napetost hall-ovega elementa je naprej ojačana z uporabo operacijskega ojačevalnika in nato preoblikovana v digitalen izhod s pomočjo schmitt triggerja, ki poskrbi za ustrezno histerezo med obemi stanji izhoda.  Glede na delovno področje histereze sta možna dva tipa: unipolarni in bipolarni. 
+Unipolarni tip je namenjen za senzorje za zaznavo prisotnosti magnetnega pretoka, bipolarni pa je namenjen zaznavi prehoda magnetnih polov in je zato primeren kot sestavni del dajalnika pozicije.
+Resolver imenujemo v žargonu tudi rotirajoči transformator, je zelo robusten in cenovno zelo ugoden način merjenja kotne pozicije in hitrosti, . V primerjavi z ostalimi dajalniki pozicije ima resolver določene prednosti kot so: 
+ zmožnost delovanja v izjemno težkih okoljskih pogojih, kot so prah, vlaga in visoka temperatura  
+ so izjemno mehansko odporni na udarce in pospeške 
+ delujejo tudi pri zelo visoki vrtilni hitrosti brez izgube natančnosti   
+
+Zaradi teh odličnih lastnosti ima veliko uporabo v vojaški in vesoljski tehniki ter v industrijskih servo pogonih kot absolutni dajalnik pozicije rotorja motorja. Seveda imajo tudi slabe lastnosti kot so: slabša natančnost primerljiva z optičnimi enkoderji, potrebuje zelo hiter AD pretvornik in zmogljiv procesor, ki pretvori analogno obliko signala v digitalno obliko pozicije in hitrosti.
+Na sliki \ref{fig:resolver_trafo} je prikazana osnovna zgradba resolverja. Na statorju se nahajajo vzbujalno navitje ter dve navitji iz katerih dobimo povratni signal sin in cos. Skozi primarno navitje transformatorja je pritisnjena sinusna vzbujalna napetost, katera inducira tok v sekundarnem (rotorskem) tokokrogu, ki je v fazi s primarnim tokom in nedovisen od položaja rotorja in teče skozi drugo navitje rotorja, ki ima izražene pole. Rotorski tok, inducira napetost  v statorskih navitjih sin in cos, ki sta geometrično zamaknjeni za 90 stopinj. Zaradi izraženosti polov rotorja in geometrične postavive sin cos navitij, so napetosti odvisni od položaja rotorja. Običajna vrednost amplitude vzbujalne napetosti $U_{vzb}$ je 1$V_{pp}$, frekvenca pa se giblje nekje med 1-10kHz.
+
+V enačbah \ref{resolver_uout} sta prikazana odvisnonst napetetosti med sin in cos navitjema ter vzbujalno napetostjo resolverja,  na sliki \ref{fig:resolver_signali} pa tudi njihov potek.
+Konstanta K je sklopni faktor, odvisen je od velikosti reže ter razmerja ovojev med primarjem in sekundarjem. Ta podatek je pomemben pri izbiri resolverja z že podanim AD pretvornikom, saj le-ti imajo merilno območje prilagojeno prav na sklopni faktor K. Iz enačbe \ref{resolver_theta} je razvidno, da padec napetosti zaradi ohmske upornosti, kot tudi različen sklopni faktor nimajo nikakršnega vpliva na točnost meritve vse dokler je povraten signal v merilnem območju AD pretvornika, to dosežemo z izborom resolverja, kateri ima ustrezen sklopni faktor.\\
+Kot rotorja $\Theta$ se lahko izračuna na preprost način, kot prikazano v enačbi \ref{resolver_theta}, ta metoda je najbolj natančna, če se vzorci signala zajemajo v točki maksimalne napetosti. Poleg rotorskega kota je zaželjeno, da nam dajalnik podaja tudi hitrost, zato so se razvile različne metode, ki so bolj natančne in izračunajo tudi hitrost. Novejša metoda v uporabi se imenuje sledenje opazovanega kota (\textit{angl. Angle Tracking Observer}). Blokovna shema metode prikazana na sliki \ref{resolver1}, temlji na zaprtozančnem sistemu, pri čemer primerjamo signala resolverja $u_{sin}$ in   $u_{cos}$ z njihovima približkoma. Podobno kot pri vskem zaprtozančnem sistemu je smisel čimbolj zmanjšati statični pogrešek. Pogrešek opazovanega kota je razlika med pravim kotom $\Theta$ in  približkom $\hat{\Theta}$ \cite{Reddy-ATO}. Za izračun pogreška z danima signalima  $u_{sin}$ in   $u_{cos}$ se poslužujemo svojstva trigonometrične funkcije $\sin(\Theta - \hat{\Theta}) =  \sin\Theta\;\cos\hat{\Theta} -  \cos\Theta\;\sin\hat{\Theta}$ in njena realizacija se na sliki \ref{resolver1} vidi kot vhodni signal v ojačevalnik $K_1$. Sedaj  bi lahko sledil logičen sklep, da je potrebno izračunati še inverzno trigonometrično funkcijo $\arcsin$, če želimo dobiti razliko $\Theta - \hat{\Theta}$. Ponovno izrabimo svojstvo trigonometrične funkcije in zapišemo, da za majhne odmike velja  $\sin(\Theta - \hat{\Theta}) \approx \Theta - \hat{\Theta} $. Sistem sledenja sestoji iz integratorja in PI regulatorja, prenosna funkcija zaprte zanke je prikazana v enačbi \ref{resolver_trfcn1}, nadalje pa se za lažjo predstavo prenosno funkcijo opiše kot člen drugega reda, pri čemer je $\omega_{n}$ lastna frekvenca, $\xi$ pa faktor dušenja \cite{semiconductor2009using}. Ustrezna izbira parametrov omogoča odziv na enotino stopnico tako, da ima izhodni signal čim hitrejši odziv s čim manjšim prenihajem.
+
+Optični inkrementalni dajalnik je najbolj pogosto uporabljen pozicijski dajalnik v elektromotornih pogonih. Njegove dobre lastnosti so natančnost in relativno nizek strošek izdelave, kot slabosti pa štejemo: občutljivost na mehanske poškodbe, omejena življenska doba zaradi slabljenja občutljivosti foto detektorjev, omejena vrtilna hitrost delovanja zaradi omejene preklopne frekvence foto detektorjev. Na sliki \ref{inkr_enkoder_del} je prikazana poenostavljena zgradba inkrementalnega dajalnika: izvor svetlobe, disk z optično rešetko iz naparjene kovine, uklonska mrežica in foto detektorji. Svetlobni tok pronica skozi rotorsko rešetko in uklonsko mrežico do foto detektorjev A in B proge, ki sta zamaknjena za 90$^\circ$  glede na modulirano svetlobo, le-ta nastane zaradi uklona svetlobe pri pehodu skozi dve rešetki, kateri imata različen raster. Ta pojav se imenuje Moire-jev vzorez in na sliki \ref{moire} \cite{gabrielyan2007basics} je prikazan pomik rotorskega diska za en razdelek glede na statorsko ploščo, kjer se lepo vidi zatemnjene in osveltjene dele. Z uporabo uklonske mrežice je možno ustvariti ustrezno velika področja zatemnitve, da jih lahko foto detektor zazna, navkljub svoji večji fizični velikosti od samega rasterja rotorske plošče. Jakost svetlobe ima sinusno obliko v območju pomika za en razdelek (raster) in jo lahko pretvorimo v električni signal tako, da uporabimo za vsako progo dva fotodetektorja, ki sta zamaknjena za 180$^\circ$, imenujemo jih $A$,$\bar{A}$ ter $B$,$\bar{B}$. Njihove signale ojačamo z diferencialnim ojačeavlanikom, kot prikazano na sliki \ref{inkr_enkoder_diffamp}, tako dobimo na izhodu diferencialnega ojačevalnika sinusni signal katerega nato preoblikujemo v pravokotne pulze, ki so primerne oblike za štetje z digititalnim števcem. Na sliki \ref{inkr_enkoder_izhod} so prikazani izhodni signali dveh prog in ponazoritev impulzov števca v pozitivno in negativno stran iz katerega tudi izhaja ime: inkrementalni dajalnik. Prikazani način štetja se v literaturi imenuje $4\times$, ker se v števec prišteva ob vsakem prehodu signala bodisi proge $A$ ali $B$, zato je število pulzov na en obod enako štirikratniku števila črtic, ki jih ima rotorski disk. Primer rotorskega diska na sliki \ref{inkr_enkoder1} ima 128 črtic, kar bi naneslo 512 pulzov števca na en obrat. Pridobljena pozicija je tako relativen pomik od referenčne točke, ki jo je ob vsakem ponovnem zagonu potrebno znova določiti, saj inkrementalni dajalnik nam ne daje absolutne pozicije. 
+
+Pri pozicioniranju elektromotornih pogonov je poleg pozicije, pomembna tudi informacija o hitrosti.  
+Ker je inkrementalni dajalnik po svoji zasnovi merilnik položaja se lahko hitrost meri posredno iz spremembe položaja v merilnem intervalu kot meritev periode pulzov ali kot meritev frekvence pulzov inkrementalnega dajalnika. 
+Na sliki \ref{inkr_enkoder_metoda_f} je prikazana metoda merjenja frekvence. Pulzi iz števca pozicije se merijo v fiksnih intervalih $T_{vz}$, le-ta je določen glede na periodo vzorčenja regulacijske zanke (gl. poglavje xx). Iz prikaza je razvidno, da pri nizki frekvenci pulzov postane metoda nenetančna, kot vidimo je število preštetih pulzov $N_f$ pri isti vhodni frekvenci v zaporednih merilnih intervalih različno: 2, 2, 3, 2. Enačba \ref{inkr_enkoder_omega_metodaf} opisuje preračunano hitrost $\Omega_f$ \cite{vcurkovivcmeritev}, pri čemer je faktor 4 v enačbi posledica štetja vhodnih pulzov po metodi  $4\times$ opisani na sliki \ref{inkr_enkoder_izhod}. Relativni pogrešek $e_f$ \cite{bergelj1993osnove} metode je odvisen od dolžine periode merjenega signala $T_p$. Pri večanju periode vhodnega signala postaja pogrešek čedalje večji, kar pomeni da lahko to metodo uporabimo le pri visoki frekvenci vhodnih pulzov.
+
+Naslednja metoda, katera je primerna za merjenje hitrosti meri čas periode vhodnih pulzov namesto frekvence, zato je primerna za merjenje pri nizkih hitrostih. Med dvema zaporednima pulzoma merjenega signala štejemo pulze urinega takta. Izbrana frekvenca urinih pulzov je najvišja možna glede na dane zmožnosti elektronske merilne enote, saj se relativni pogrešek  $e_T$ manjša ob večanju frekvence urinega takta. Enačba \ref{inkr_enkoder_omega_metodaT} opisuje izračun hitrosti $\Omega_T$ glede na število preštetih pulzov $N_T$ ter periode urinih pulzov $T_{ure}$.
+
+Ker metodi merjenja frekvence ali periode same po sebi ne zagotavljata točnost meritve na širokem obsegu hitrosti, je smiselno združiti obe v kobinacijo le-teh. Kot prikazano na diagramih poteka, bi lahko za posamezne metode uporabili zgolj logična vrata, nekaj bistabilnih multivibratorjev in urin takt z zelo visoko frekvenco. Vsi ti elementi se lahko sprogramirajo v logično enoto z uporabo FPGA logike, ki meri hitrost po obeh metodah in preklaplja rezultat glede na relativni pogrešek obeh. Če pogledamo enačbi \ref{inkr_enkoder_omega_metodaf} un \ref{inkr_enkoder_omega_metodaT} nam je takoj jasno, da je za izbiro ugodnejše metode dovolj primerjava preštetih pulzov $N_f$ in $N_T$.
+Sin/Cos dajalnik se v sami zgradbi ne razlikuje on inkrementalnega, razlika je le v izhodnem signalu dajalnika. Kot smo spoznali, daje inkrementalni dajalnik provokotne pulze, ki so bili predhodno preoblikovani iz sinusne napetosti, ki jo daje diferencialni ojačevalnik prikazan na sliki \ref{inkr_enkoder_diffamp}. Sin/Cos dajalnik posreduje izhoden signal, ki je ravno takšne sinusne oblike z amplitudo $1V_{pp}$ za progo $A$ in $B$, ki sta medseboj zamaknjeni za 90$^\circ$, se pravi sinus in kosinus, od tod ime Sin/Cos. Ta dva signala peljemo do vhoda merilne enote pozicije (slika \ref{EnkoderSinCos}, \cite{schmirgel2009fpga}), kjer se razdelita na dva dela. V prvem delu se signala preoblikujeta v pravokotne pulze in preštevajo po že omenjenih metodah. Drugi del sestoji iz računala, ki preračunava vmesni kot med dvemma črticama na rotorskem disku in na tak način z interpolacijo vrine še dodatne vmesne točke pozicije. Metoda izračuna kota se v bistvu ne razlikuje od že opisane medote  \textit{Angle Tracking Observer}. Prednosti Sin/Cos dajalnika je v tem, da je možno izračunati že zelo majhno hitrost in obenem je tak dajalnik uporaben tudi za visoke vrtilne hitrosti, saj potrebuje manjše število črtic na disku v primerjavi z inkrementalnim dajalnikom za isto resolucijo, kar posledično pomeni nižjo frekvenco preklapljanja fotodetektorjev, katera je omejena z vidika tehnoloških zmožnosti fotodetektorja. Tak tip dajalnika srečamo na CNC strojih za obdelavo kovine, kjer je zahtevana največja natančnost.
+
+Absoultni optični dajalnik se razlikuje od inkrementalnega po tem da ima več prog in nam podaja absoultno pozicijo za en obrat rotorja. Za $2^N$ pozicij je potrebnih $N$ prog, katere so razvrščene po Gray-evi kodi. Gray koda je oblika binarnega zapisa, kjer se dve sosednji vrednosti razlikujeta le za en bit. Zasnovana oblika kodiranja je nastala kot ustrezna rešitev problema lažnih preklopev med stanji binarne kode. V binarni kodi namreč, bi se morala stanja vseh elektromehaskih preklopnikov spremeniti sinhrono ob vsakem novem stanju, to pa seveda v praksi ni mogoče. Iz tabele \ref{Absolutni_enkoder_disk_Gray} je ravidna razlika med binarno in Gray-evo kodo in sicer vsako novo stanje se v Gray kodi razlikuje od prejšnjega samo v enem bitu, puščice ponazarjajo redosled prehodov med stanji, ki ima lahko tudi obratno smer v primeru vrtenja dajalnika nazaj. Na sliki \ref{Absolutni_enkoder_disk_Gray} je prikaz oblike vzorca rotorske plošče absolutnega dajalnika. Absolutne dajalnike v kombinaciji z večobratnim števcem (gl. naslednje podpoglavje) se uporablja v strojih pri katerih je zaželjeno imeti znano pozicijo tudi v primeru izpada električne energije in povsod tam, kjer bi začetno iskanje referenčne točke povročalo težave. Primer takšnih strojev so dvigala, avtomatizirana regalna skladišča, proizvodna linija polizdelkov,...itd.
+Do sedaj opisana absoltuna dajalnika resolver in optični lahko podajata absolutno pozicijo le v območje enega obrata rotorja, vendar je to v praksi premajhno uporabno območje, zato se jim doda še večobratni števec. To je mehanska naprava, podobna števcu za porabo vode s to razliko, da je kodirana v Grey kodi in ima namesto cifer Hall senzorje za odčitavanje magnetnih prog, ki so nanešene na zobnikih. Na sliki \ref{AbsolutniKodirniDisk.jpg} je prikazana praktična izvedba takšnega števca, ki skupaj z absolutnim dajlinikom tvorita t.i. večobratni absolutni dajalnik. V podatkih proizvjalca \cite{temperature3sendix} se nahaja ločen podatek o tem kolikšna je resolucija na en obrat (npr. 10-bit = 512 razdelkov/obrat) ter kolikšen je obseg obratov (npr. 12-bit = 4096 obratov).
+
+Električni stroji so naprave s katerimi pretvarjamo energijo s posredovanjem magnetnega polja. To so elktromagnetne naprave, ki pretvarjajo električno energijo v mehansko energijo, mehansko energijo v električno energijo in električno energijo ene oblike v električno energijo druge oblike. Po svojem namenu uporabe so to električni mootorji, električni generatorji in transformatorji \cite{miljavec2009vezna} V nadaljevanju se bomo osredotočili le na električne stroje, ki imajo zmožnost pretvarjanja električne energije v mehansko in obratno ter so sklopljeni z mehanskim sistemom, z drugim imenom jih imenujemo elektromotorni pogoni.\\  
+
+Na sliki \ref{Pogon_moment_ravnovesje} je prikazan sklop elektromotornega pogona. Sestoji se iz električnega stroja in mehanskega sistema , ki sta medseboj povezana in med njima delujejo navori, ki so  v ravnovesju kot to opisuje ravnovesna enačba (\ref{Pogon_moment_ravnovesje}). Navorna ravnovesna enačba popisuje ravnotežje navorov, ki delujejo na gredi stroja in vplivajo na vrtenje rotorja. Poleg elekromagnetnega navora $M$ delujejo na gred še drugi navori, ki izvirajo iz mehanike samega stroja. Ob tem pa še navori, ki izvirajo iz zunanjih naprav priključenih na gred. Vsi ti navori morajo biti na gredi vsak trenutek obratovanja v ravnotežju. Posamezne oznake pomenijo: $\Omega$ je trenutna kotna hitrost vrtenja gredi in rotorja; $M$ je pogonski navor stroja; $M_L$ je zunanji bremenski navor, ki zavira vretnje gredi pri motorskem delovanju, negativna vrednost $M_L$ pomeni navor, ki poganja rotor v smeri vrtenja v generatorskem delovanju; $J\alpha$ je navor, ki izvira iz vztrajnostnega momenta $J$ vseh vrtečih se mas in skuša preprečiti vsako spremembo hitrosti $\Omega$; $F\Omega$ je navor viskoznega trenja, ki deluje vedno zaviralno ter ga je pogosto treba upoštevati pri obravnavi visoko dinamičnih pogonov \cite{miljavec2009vezna}.
+
+Električni stroj žene breme, ki ima svoj vztrajnostni moment in deluje z določeno nazivno hitrostjo, zato je potrebno prilagoditi hitrost motorja bremenu. Na splošno uprabljeni elementi strojništva za ta namene so planetni reduktorji, zobniški prenosi, jermenice,...itd. Za optimalno delovanje celotnega sklopa je priporočljivo, da je preslikan bremenski vztrajnostni moment enak vztrajnostnem momentu rototrja motorja. Le tako se lahko doseže najboljši odziv regulacijskega kroga. Na sliki \ref{Mehanika_reduktor} je prikazan princip maehanskega reduktorja s prestavnin razmerjem $p$. Izhodna hitrost iz reduktorja je tako: $\Omega_L = \dfrac{\Omega_R}{p}$, navor pa $M_L=M\cdot p$. Skoraj najpomemnejši podatek pa je preslikan vztrajnostni moment na vhodno stran reduktorja: $J_L'=\dfrac{J_L}{p^2}$, ki skupaj z vtrajnostnim momentom rotorja predstavlja vtrajnostni moment sistema: $J_S=J_R+J_L'$. Pomembna lastnost sklopa je ta, da izhodna hitrost upada sorazmerno s prestavnim razmerjem, preslikan vztrajnostni moment pa kvadratično, kar je zelo ugodno pri izbiri ustreznega prestavnega razmerja in tipa motorja.\\
+
+Najprej je potrebno določiti vztrajnostni moment bremena ter hitrosti pomikov, nato se iz proizvajalčevega kataloga servo motorjev izbere določen nabor motorjev s podatki o vztrajnostnem momentu motorja in nominalno hitrostjo. Naparavi se tabela izračunov preslikave vztrajnostnega momneta bremena v odvisnosti od prestavnega razmerja in nato primerja z vztrajnostnim momentom rotorja in tako izbere ustrezen tip motorja. Proizvajalci imajo običajno nabor sinhronskih servo motorjev z različnimi vztrajnostnimi momenti pri skoraj enaki izhodni moči motorja. Imenovani so angl. high inertia, standard, high dynamics; to so motorji z velikim, standardnim ali majhnim vztrajnostnim momentom. Za izjemno dinamične sisteme pa obstajajo še prisilno hlajeni servo motorji, zračno ali vodno. Standardni motorji so konvekcijsko hlajeni, večje kot nazivne moči, so tudi motorji večjih dimenzij in s tem imajo tudi večji vztrajnostni moment. Posebna oblika visoko dinamičnih motorjev je ta, da se za večjo moč motorja ne uporabi večanje dimenzij ampak tokovno obrementitev in zato postane potreba po prisilnem hlajenju. Motorji z naječjo dinamiko so tako vodno hlajeni, kar pomeni zajeten strošek saj potrebuje zraven še hladilni sistem.\\   
+Pri sami oblike montaže motorja na reduktor je potrebno še posebna pozornost, namreč spojka katera objema rotorsko gred ima lahko velik vtrajnostni moment v primerjavi z rotorjem, tu gre seveda za motorje z visoko dinamiko. Pri izbiri motorja z visoko dinamiko, prav vsi dodatki kot so dajalnik pozicije in elektromehanska zavora, znatno prispevajo h končnem vztrajnostnem mommentu sistema, saj ostale vrteče se mase na izhodu reduktorja nimajo takšen velik vpliv. 
+
+V primeru, da poznamo osnovno matematično relacijo med vhodom in izhodom nekega
+sistema, bi lahko vnaprej določili vrednost vzbujanja, katerega bi vnesli v sistem, da bi dobili želeno izhodno vrednost iz sistema. Tak način vodenja imenujemo krmiljenje (slika \ref{Regulacije_Krmiljenje}), njegova značilnost je ta, da nima povratne zanke.\\
+
+Slabost krmiljenja je občutljivost na zunanje vplive zaradi katerih pride do odstopanja med želeno in dejansko vrednostjo krmiljene količine. Kot ustrezna rešitev problema so so se pojavili regulirani sistemi, kjer merimo izhodno količino in jo nato primerjamo z želeno vrednostjo, tako dobimo pogrešek $\varepsilon$. Regulator nato nastavlja vhodno količino sistema in s tem poskrbi, da je pogrešek čim manjši oz. da se ta celo popolnoma odpravi \cite{pribec2014optimizacija}. 
+
+Regulirani sistemi (slika \ref{Regulacije_Zaprt}) imajo sklenjeno povratno zanko, zato te imenujemo
+tudi zaprtozačne sisteme, krmiljene sistema pa odprtozančne. Ker noben fizikalen sistem ne deluje neskončno hitro, tudi od regulatorja ne moremo pričakovati, da bo trenutno opdravil spremembo, za to je potreben nek regulacijski čas. Regulacije delimo na linearne in nelinearne, odvisno od  členov, ki nastopajo v regulacijskem krogu. V linearnih regulacijah nastopajo le linearni členi. Če v regulacijskem krogu nastopa le en nelinearen člen, je regulacija nelinarna. Realen sistem je skoraj vedno nelinearen, večinoma je njegova statična karakteristika nelinearna, zato se ga linearizira v točki delovanja in se smatra, da je za majhne odmike sistem linearen in se ga opiše z diferencialnimi enačbami za dano dolovno točko \cite{Cajhen1990regulacije}.\\ 
+Teorija regulacij ukvarja predvsem s prehodnimi pojavi, se pravi s frekvenčno analizo, kjer so statične karakteristike sistema izvzete. Tukaj pride do pogostega napačnega razumevanja delovanja regulatorjev, ker se pozablja dejstvo, da gre za linearizacijo sistema v določeni delovni točki, ki jo praviloma prištejemo izhodni veličini regulatorja, vendar je v literaturi teorij regulacij ta člen izpuščen, ker je statičen. Na splošno se lahko dva področja združita, krmiljenje in regulacije tako, da se izhodni veličini regulatorja prišteje krmilno vejo, na primer posneto karakteristiko statičnega modela (slika \ref{Regulacije_statika}), to se imenuje kombiniran sistem. Ker se krmilna veja ne nahaja v zaključeni zanki regulacijskega kroga, nima vpliva na stabilnost samega regulacijskega kroga.\\ 
+
+Najpreprostejši regulator je proporcinalni (P) regulator, kjer je izhod regulatorja enak ojačanemu pogrešeku $u(t)=K_p\;\varepsilon(t)$. Tak regulator srečamo povsod tam kjer je zaželena preprostost delovanja, na primer pri ogrevalni tehniki. Naslednji zelo razširjen regulator je proporcinalno integralni (PI) regulator, ki ima dodan integralni člen, le-ta poskrbi za odpravo statičnega pogreška, ki se pojavi pri proporcionalnem regulatorju v primeru, da sistem nima izražene integracije. Enačba, ki opisje izhod proporcionalno integralnega regulatorja je: $u(t)=K_p\;(\varepsilon(t)+\frac{1}{T_i}\int\varepsilon(t)dt)$ ali pa v Laplace-ovim prostoru kot prenosna funkcija: $\dfrac{U(s)}{\varepsilon(s)}=R(s)=K_p(1+\dfrac{1}{sT_i})$. Najbolj razširjen tip regulatorja je proporcinalno integralni derivativni (PID), ki ga srečamo v industriji kot univerzallen tip regultorja. Z uporabo diferencialnega člena je njegov odziv hitrejši, saj se odzove na časovno spremembo pogreška. Približno na enak način človek lovi ravnotežje, že pričetek nagibanja vzbudi reakcijo in popravek drže telesa še preden se sploh pojavi večji nagib.\\
+ Slabost splošnega PID regulatorja po enačbi \ref{Regulacije_PIDsimple} je ta, da je odziv diferencialnega člena premosorazmeren časovni spremembi vhodnega signala $\varepsilon$, ne pa tudi amplitudi signala kar pomeni, da tudi zelo šibek hitro se spreminjajoč signal kot na primer šum, sproži velik odziv na izhodu. Ta pojav je seveda zelo nezaželjen in zato se uporablja drugačna izvedba PID regulatorja, ki ima pred diferencialnim členom, člen prvega reda, kateri izloči visoke frekvence (enačba \ref{Regulacije_PIDind}).\\
+
+Najpogosteje je časovna konstanta člena prvega reda $T_d'$ izražena iz same časovne konstante diferencialnega člena $T_d$ kot faktor $\gamma$. Z velikim  $\gamma$ faktorju se učinek filtra zmanjšuje in je čedalje bolj podoben diferencialnemu členu brez filtra, pri zelo majhnem $\gamma$ faktorju pa se zmanjšuje učinek diferencialnega člena do te meje, da izgubi svoj pomen. Po priporočilih za optimalno delovanje, naj bi ta faktor znašal približno 10 \cite{bobal2006digital}.
+
+Na sliki \ref{Regulacije_EnostPoz} je prikazana enostavena regulacija pozicije. Celoten regulacijski krog ima le en regulator: želena vrednost je kot rotorja $\Theta^*$, izhodna vrednost je želena napetost motorja $u_q^*$ ter merjena vrednost je dejanski kot rotorja $\Theta$. Takšen regulacijski krog bi deloval zelo počasi.\\
+
+Rešitev je niz regulacijskih krogov, ki jo imenujemo kaskadna regulacija. Značilno za to vrsto regulacije je, da nastopata po dva ali več regulatorjev, pri čemer se njuna regulacijska kroga ne prepletata, temveč zajema zunanja povratna zveza vedno celotni notranji regulacijski krog \cite{Cajhen1990regulacije}. Zunanje regulacijske kroge imenujemo počasne nadrejene, notranje pa hitre podrejene. Vsak nadrejeni krog je v bistvu dajalnik želene vrednosti podrejenemu. Za kaskadno regulacije se je potrebno vedno odločiti takoj, ko obstaja ena ali več vmesnih merjenih veličin procesa. \\
+Na sliki \ref{Regulacije_EnostZanka} je prikazana kaskadna izvedba regulacije pozicije. Razdeljena je na tri regulaijske kroge: pozicijska, hitrostna in tokovna zanka. Zunanja, najpočasnejša je pozicijka zanka, katera podaja želeno vrednost hitrostni zanki, le-ta pa podaja želeno vrednost tokovni, ki je najhitrejša. Prehod iz enostavnega regulacijskega kroga iz slike \ref{Regulacije_EnostPoz} je bil možen z uvedbo novih vmesnih merjenih vrednosti procesa, to sta hitrost $\Omega$ ter tok $i_q$.
+
+Vodena regulacija je posebna oblika kombinirane regulacije, kjer v regulacijski krog vnašamo krmilno veličino. Na sliki \ref{Regulacije_VodenZanka} sta prikazani dve vhodni vrednosti: $\Theta^*$ je želena pozicija, $\Omega^*$ pa želena hitrost. Ti dve vrednosti bi lahko bile podane od generatorja trajektorije ali pa recimo od nekega nadrejenga pogona, ki se mu želi slediti. Navsezadnje, se lahko želeno vrednost hitrosti $\Omega^*$ izrazi tudi z odvajanjem pozicije po času $\Omega^*=\dfrac{d\Theta^*}{dt}$ . Krmilna veja na grobo podaja že vnaprej znano velikost hitrosti in toka, slednjega se preračuna z znano vztrajnostnim momentom sistema $J$, regulacijski krog pa skrbi, da se odpravijo morebitne netočnosti pri krmiljenju in prevzame tako vlogo korektorja. V primeru, da so parametri krmilne veje točni, bi sistem brez zunanjih vplivov točno sledil krmilni želeni vrednosti, kar pomeni da regulacijski krog nebi bil potreben. Ravno v tem nastopi težava, saj sprememba obeh želenih vrednosti nastopita hkrati kar pomeni, da se pogrešek $\varepsilon_{\Theta} $ pojavi takoj, še preden pride do odziva sistema zaradi vpliva krmilne vrednosti, četudi bi se po reakcijskem času sistema pogrešek popolnoma izničil. Rešitev težave je postavitev kasnilnega člena pred posamezen regulacijki krog, v ta namen so običajno uporabljeni členi prvega reda, ki kasnijo odziv posameznega regulatorja. Tako se počaka odziv sistema zaradi krmilne vrednosti in šele nato ukrepa ob morebitni razliki med želeno in dejansko vrednostjo.\\
+Ravno tako kot pri kombinirani regulaciji, tudi tukaj krmilna veja nima vpliva na stabilnost regulacijkega kroga, ker nima povratne zanke. 
+
+V praksi so danajšnji regulatorji skoraj izključno digitalni. Digitalni regulator je v osnovi nezvezen regulator, ker deluje v diskretnem času, metdem pa je reguliran sistem zvezen, ker se nahaja v zveznem prostoru.  To pomeni, da digitalen regulator preslika zvezni čas v diskretnega s pomočjo  analogno digitalnega pretvornika (A/D), opravi zračun ter preslika diskretne vrednosti izhoda v zvezni čas s pomočjo digitalno analognega pretvornika (D/A). Zaradi poenostavitve izračuna izhodnega signala regulatorja {$u(k)$ je zaželjeno, da se celoten proces izvaja v determinističnih časovnih intervalih, ki ga imenujemo čas vzorčenja $T_s$ ali pa frekvenca vzorčenja $f_s$.\\
+
+	Višja kot je frekvenca vzorčenja, bolj je digitalni regulator podoben analognemu zveznemu regulatorju, vendar v praksi obstaja omejitev izbire časa vzorčenja. Zaradi končne ločljivosti števil s plavajočo vejico, bi bili zelo majhni prirastki, ki se prištevajo integralnemu členu, preprosto zaokroženi na nič, zato velja uporabiti čim višjo ločljivostjo števila plavajoče vejice (\textit{Double, LREAL}). Prav tako nastane težava pri diferencialnem členu zaradi skokov merjene veličine oz. kvantizacije, kar povroča velike skoke na izhodu diferencialnega člena. Pri izbitri časa vzorčenja je proporočljivo uporabiti: $\omega_{krit}T_s<\pi/4$, pri čemer je $\omega_{krit}$ kritična krožna frekvenca sistema odprte zanke. V slučaju, da se od regulatorja pričakuje, da izniči vpliv motnje mora biti po Shannon-ovem teoremu čas vzorčenja $T_s\leq\dfrac{\pi}{\omega_{max}}$, kjer $\omega_{max}$ predstavlja navišjo možno krožno frekvenco motnje, ki jo regulator lahko odpravi. Preprosto priporočilo je tudi, da ze za čas vzorčenja vzame $T_s=(\frac{1}{6}\div\frac{1}{15})\cdot T_{95}$, kjer je $T_{95}$ čas odziva sistema na skočno spremebo dokler ne doseže 95\%  končne ustaljene vrednosti \cite{bobal2006digital}.\\
+	Pri realizaciji PID regulatorja v mikrokrmilniškem sistemu, se večkrat pojavi težava pri ustrezni rešitvi nasičenja integratorja. Pri normalnem delovanju regulatorja je zaželeno, da nikoli ne presežemo meje izhodnega signala, saj vsaka limita pomeni vnos nelinearnosti v sistem in s tem tudi injiciranje visokih frevenc, ki lahko v sistemu zbudijo osciliranje. Zaradi tega je zaželeno, da je prehod med stanjem nasičenosti nazaj v normalno delovanje čim ugodnejše. Za izračun izhoda regulatorja se ponavadi sešteva posamezne komponente P, I in D, vendar je s takšnim pristopom težje napraviti ustrezno limito. Rekurziven izračun regulatorja se lahko napravi tako, da se izračuna parcialne prispevke in prišteje prejšnejmu stanju izhoda: $u(k)= \Delta u(k) + u(k-1)$, ta način se imenuje inkrementalni algoritem. Rekurziven izračun \ref{Regulacije_PIDtrap} je izvedba PID regulatorja iz enačbe \ref{Regulacije_PIDsimple} z uporabo trapezne metode za preračun integrala. Ker je izhod vsako iteracijo preračunan kot prirastek, se lahko začetna točka poljubno spreminja. V kolikor se izhod postavi na mejno vrednost, se bo v naslednji iteraciji preračunala nova vrednost z novim prirastkom od postavljene mejne vrednosti. Na tak način je zagotovljeno, da integralni člen preneha integrirati v kolikor je izhod v zasičenem stanju. V dodatku \ref{dodatekB} se nahaja koda PID regulatorja iz enačbe \ref{Regulacije_PIDind} z limito.  
+
+
+\chapter{primeri latex}
+\section{Podrobna navodila} \label{podrobna_navodila}
+\subsection{Primer pisanja enačb} \label{vnos_enacb}
+
+Formule in enačbe je potrebno očtevilčiti z zaporedno čtevilko v
+oklepaju, npr. (1), in se tako nanje tudi sklicevati. V tekstu je
+potrebno pojasniti pomen posameznih parametrov. Primer:
+
+Enačba (\ref{eq_1}) opisuje hitrost točke $\textbf{\textit{v}}$, ki se nahaja
+na telesu:
+\begin{equation}\label{eq_1}
+    \textbf{\textit{v}} = \textbf{\textit{v}}_0 + \boldsymbol{\omega} \times \mathbf{r}
+\end{equation}
+pri čemer $\textbf{\textit{v}}_0$ predstavlja hitrost izhodičča koordinatnega
+sistema, $\boldsymbol{\omega}$ kotno hitrost, $\mathbf{r}$ pa vektor
+od izhodičča do točke.
+
+Enačbo (\ref{eq_1}) lahko zapičemo v sklopu enačb po komponentah
+kot:
+\begin{eqnarray}
+% \nonumber prepreci stevilcenje posameznih enacb
+  v_x  &=& v_{0x} + z \;\omega_y - y \;\omega_z \nonumber \\
+  v_y  &=& v_{0y} + x \;\omega_z - z \;\omega_x  \\
+  v_z  &=& v_{0z} + y \;\omega_x - x \;\omega_y \nonumber
+\end{eqnarray}
+
+\subsection{Slike} \label{vnos_slik}
+
+Slike ali fotografije morajo biti očtevilčene in citirane v besedilu
+ter podnaslovljene tako, da je razvidno, kaj predstavljajo. V
+besedilo so vstavljene priblično tam, kjer se nanje sklicujemo.
+Slike naj bodo pregledne in naj prikačejo le najpotrebnejčo
+informacijo. Grafi potekov signalov na slikah morajo vsebovati imena
+osi, enote in legendo. Napisi na sliki morajo biti v slovenskem
+jeziku. Za več podrobnosti o vključevanju vektorskih in bitnih slik v
+okolju LaTex, glej prilogo \ref{dodatekC}.
+
+
+
+
+
+
+
+\slikaeps{Primer vključitve slike}{vektorska_slika_1}
+
+%namesto makroja \slikaeps se v MikTexu uporabi tudi naslednji način. Za preizkus odkomentirajte spodnje vrstice. Ne dela v PcTeXu.
+%\begin{figure}[h]
+%\centering
+%\includegraphics[width=0.75\columnwidth]{vektorska_slika_1.eps}
+%\caption{\label{oblika_signalov} Primer vključitve slike}
+%\end{figure}
+
+
+\subsection{Tabele}
+
+Tabele morajo biti, podobno kot slike, očtevilčene in citirane v
+besedilu ter podnaslovljene tako, da je razvidno, kaj vsebujejo. V
+besedilo so vstavljene priblično tam, kjer se nanje sklicujemo.
+Podatki v tabelah morajo biti poimenovani in navedeni z enotami v
+obliki, ki jo priporoča standard \cite{standard_sist_v,
+standard_sist_80000}.
+
+Napisi morajo biti v slovenskem jeziku. Primer:
+
+V tabeli \ref{prebojne_trdnosti} so navedene električne prebojne
+trdnosti različnih izolantov in priključne napetosti.
+
+\begin{table}[h]
+\centering
+\begin{footnotesize}
+\begin{tabular}{|l||c|c|}
+ \hline Izolant (pri $20^o$C) & $\emph{E}_p$ / (V/m) & $U /$ V  \\
+ \hline \hline
+ zrak & 3  & 30 \\
+ trd papir &  10 & 40 \\
+ trda guma & 10  & 36 \\
+  transformatorsko olje & 15 & 34.5 \\
+   porcelan & 20 & 45 \\
+   polivinilklorid (PVC) & 50 & 70 \\
+    polistirol & 80  & 45\\
+  \hline
+\end{tabular}
+\end{footnotesize}
+  \caption{Prebojne trdnosti izolantov in priključne napetosti}
+  \label{prebojne_trdnosti}
+\end{table}
+
+\subsection{Programska koda}
+
+Manjči deli programske kode so lahko navedeni in opisani v tekstu.
+Oblika teksta programske kode se loči od oblike ostalega teksta.
+Primer:
+
+Funkcija, ki omogoča prenos podatkov, je naslednja:
+
+\small
+\begin{verbatim}
+void I2C_Transfer(unsigned Addr,unsigned Data) {
+    I2CAddress = Addr;
+    I2CData = Data;
+
+    I2CONCLR = 0x000000FF;  // Izbris I2C nastavitev
+    I2CONSET = 0x00000040;  // Vklop I2C prenosa
+    I2CONSET = 0x00000020;  // Start signal
+}
+\end{verbatim}
+\normalsize
+\chapter{Zaključek} \label{zakljucek}
+
+\begin{enumerate}
+	\item
+	\item 
+\end{enumerate}
+
+
+%**************** LITERATURA ************************
+\bibliographystyle{ieeetrslo}
+\bibliography{literatura}
+
+%**************** PRILOGE ************************
+
+
+\appendix
+\chapter{Urejanje dokumentov z orodjem LaTex} \label{dodatekA}
+
+
+Postopek dela:
+\begin{description}
+	
+	\item[Korak 1] Avtor kreira tekstovno datoteko s končnico \emph{.tex}, ki vsebuje
+	tekst in ukaze za oblikovanje teksta (glej osnovno obliko predloge v
+	\ref{dodatekB}). Dober uvod v delo z ukazi LaTex so spletna navodila
+	\cite{oetiker1995not}. Za pisanje je lahko uporabljen katerikoli
+	tekstovni urejevalnik. Priporočamo uporabo urejevalnikov
+	WinEdt\footnote{Dosegljivo na http://www.winedt.org} ali
+	TexStudio\footnote{Dosegljivo na http://texstudio.sourceforge.net/},
+	ki sta namenski orodji z integriranimi ikonami za posamezne korake.
+	Urejevalnika vsebujeta tudi slovar slovenskih
+	besed\footnote{Dosegljivo na  http://www.winedt.org/Dict} za sprotno
+	preverjanje in deljenje besed.
+	
+	\item[Korak 2] Prevajanje izvorne datoteke s prevajalnikom MikTex. Močnost direktnega prevajanja v PDF dokument (ikonca PDFLaTeX), ali pa v EPS dokument (ikonca LaTex - deluje brez vključenih bitnih slik). Pri prevajanju v EPS dokument se najprej ustvari datoteka s končnico \emph{.dvi} (ang. Device Independent file), ki omogoča ogled dokumenta (ikona DVI Preview).
+	Pri prvem prevajanju se ustvari tudi lista citatov in sklicevanj (datoteka
+	\emph{.aux}).
+	
+	\begin{description}
+		\item[Korak 2.1]\footnote{Potrebno samo pri navajanju virov s
+			pomočjo orodja BibTex} Zagon BibTex prevajanja (ikonca Bib), ki na
+		osnovi \emph{.aux} datoteke in podatkov iz baze referenc,
+		ustvari oblikovan spisek referenc (datoteka \emph{.bbl}) glede
+		na izbran stil citiranja (datoteka \emph{.bst}).
+		\item[Korak 2.2]\footnote{Potrebno samo pri navajanju virov s
+			pomočjo orodja BibTex} Ponovno prevajanje s prevajalnikom MikTex, ki
+		v glavni dokument vključi oblikovane reference iz datoteke
+		\emph{.bbl}.
+	\end{description}
+	
+	\item[Korak 3] Ponovno prevajanje s prevajalnikom MikTex, ki
+	poveče spisek referenc z navedki v tekstu.
+	\item[Korak 4a] Pretvorba oblikovanega dokumenta v \emph{PostScript} format in nato izvoz v obliki PDF dokumenta:
+	\begin{itemize}
+		\item ikona DVI-PS - pretvorba v datoteko \emph{.ps}
+		\item Ogled \emph{PostScript} datoteke s programom
+		\emph{GhostView}
+		\item Pretvorba v PDF dokument: GhostView:
+		File/Convert/pdfwrite, pri čemer je potrebno izbrati
+		parametre za format PDF/A glede na spletna navodila\footnote{http://svn.ghostscript.com/ghostscript/trunk/gs/doc/Ps2pdf.htm\#PDFA}.
+	\end{itemize}
+	V tem primeru morajo biti vse vključene slike v formatu
+	\emph{PostScript}. V tem načinu je močna tudi uporaba orodja \emph{PSfrag}, ki omogoča
+	zamenjavo tekstovnih elementov na originalni sliki s poljubnim
+	tekstom ali enačbo.
+	\item[Korak 4b] Pretvorba oblikovanega dokumenta neposredno v
+	PDF format. Ikona PDFTexify. V tem primeru so vključene
+	slike lahko le v formatu PDF, PNG, JPEG ali GIF.
+	
+	Pretvorba iz formata PDF v format PDF/A, ki je zahtevan za oddajo v Repozitorij UL, je
+	močna z uporabo spletnega prevajalnika\footnote{http://convert.neevia.com}, programa Adobe Professional (plačljiva rečitev) ali programa PDFCreator\footnote{http://www.pdfforge.org/pdfcreator} (zastonjska rečitev). Program PDFCreator z nastavitvami\footnote{http://www.jud.ct.gov/external/super/e-services/efile/How-to-Save-or-Convert-to-PDFA.htm}
+	omogoča tiskanje v format PDF/A, saj se namesti kot tiskalnik.
+\end{description}
+
+
+
+
+\chapter{Primer kode PID regulatorja} \label{dodatekB}
+
+\small
+\begin{verbatim}
+double Ts, gamma, u_min, u_max;
+double Kpu, Tu, Kp, Ti, Td, Tf, cf, ci, cd;
+double q0, q1, q2, p1, p2;
+
+//parametri, ki se preračunajo ob inicializaciji
+Tf = Td/gamma;
+cf = Tf/Ts;
+ci = Ts/Ti;
+cd = Td/Ts;
+p1 = -4*cf/(1+2*cf);
+p2 = (2*cf-1)/(1+2*cf);
+q0 = Kp * (1 + 2*(cf+cd) + (ci/2)*(1+2*cf))/(1+2*cf);
+q1 = Kp * (ci/2-4*(cf+cd))/(1+2*cf);
+q2 = Kp * (cf*(2-ci) + 2*cd + ci/2 - 1)/(1+2*cf);
+
+// PID algoritem  preračunan ob vsaki prekinitvi
+ek2 = ek1;
+ek1 = ek;
+ek = input;
+uk2 = uk1;
+uk1 = u;
+
+u = q0*ek + q1*ek1 + q2*ek2 - p1*uk1 - p2*uk2;
+//limita
+if   u>u_max u = u_max;
+elseif u<u_min u= u_min;
+
+output=u;
+\end{verbatim}
+
+
+
+
+
+
+\end{document}

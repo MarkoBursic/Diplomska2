@@ -1,0 +1,80 @@
+\begin{thebibliography}{10}
+
+\bibitem{manual-Honeywell}
+Honeywell, West Spring Street, {\em HALL EFFECT SENSING AND APPLICATION}.
+
+\bibitem{Reddy-ATO}
+S.~C.~M. Reddy in K.~N. Raju, ``A novel design method for resolver to digital
+  converter,'' {\em International Journal of Advanced Engineering and
+  Technology}, vol.~4, no.~2, str.~343--348, 2012.
+
+\bibitem{semiconductor2009using}
+F.~Semiconductor, ``Using the resolver interface etpu function,'' {\em
+  Freescale Semiconductor, AN3943, Rev. 0}, 2009.
+
+\bibitem{gabrielyan2007basics}
+E.~Gabrielyan, ``The basics of line moir{\'e} patterns and optical speedup,''
+  {\em arXiv preprint physics/0703098}, 2007.
+
+\bibitem{vcurkovivcmeritev}
+M.~{\v{C}}urkovi{\v{c}}, A.~Hace, K.~Jezernik  in M.~Franc, ``Meritev hitrosti
+  z inkrementalnim dajalnikom,''
+
+\bibitem{bergelj1993osnove}
+F.~Bergelj, {\em Osnove meritev}.
+\newblock Fakulteta za elektrotehniko in ra{\v{c}}unalni{\v{s}}tvo, 1993.
+
+\bibitem{schmirgel2009fpga}
+H.~Schmirgel in J.~Krah, ``„fpga based sine-cosine encoder to digital
+  converter using delta-sigma technology “,'' {\em PCIM Power Conversion
+  Intelligent Motion, N{\"u}rnberg}, str.~866--871, 2009.
+
+\bibitem{temperature3sendix}
+I.~Temperature~High, ``Sendix absolut, multiturn type 5868 (shaft)/5888 (hollow
+  shaft), profibus-dp,'' {\em Signal}, vol.~3, str.~4.
+
+\bibitem{miljavec2009vezna}
+D.~Miljavec in P.~Jereb, ``Vezna teorija elektri{\v{c}}nih strojev,'' {\em FE,
+  Ljubljana}, 2009.
+
+\bibitem{ambrovzivc1996sodobne}
+V.~Ambro{\v{z}}i{\v{c}}, {\em Sodobne regulacije pogonov z izmeni{\v{c}}nimi
+  stroji}.
+\newblock Fakulteta za elektrotehniko, 1996.
+
+\bibitem{LaTex}
+Forum, ``Latex stackexchange.'' Dosegljivo:
+  \url{http://tex.stackexchange.com/}, note = {[Dostopano: od 1. 4. do 30.6
+  2016]}.
+
+\bibitem{instruments1998field}
+T.~Instruments, ``Field oriented control of 3-phase ac motors,'' {\em
+  Application Note BPRA073}, 1998.
+
+\bibitem{yumrukccal2013dynamic}
+Z.~YUMRUK{\c{C}}AL, {\em Dynamic Modeling of High Precision Servo Systems with
+  Gear Backlash}.
+\newblock PhD thesis, MIDDLE EAST TECHNICAL UNIVERSITY, 2013.
+
+\bibitem{DesignTrends}
+M.~D. Inc., ``{Design Trends}.'' Dosegljivo:
+  \url{http://www.motion-designs.com/}, note = {[Dostopano: 6. 6. 2016]}.
+
+\bibitem{pribec2014optimizacija}
+S.~M. Pribec, {\em Optimizacija vodenja linearnega sinhronskega motorja:
+  diplomsko delo univerzitetnega {\v{s}}tudija}.
+\newblock PhD thesis, SM Pribec, 2014.
+
+\bibitem{Cajhen1990regulacije}
+R.~Cajhen, {\em Regulacije}.
+\newblock Fakulteta za elektrotehniko, Ljubljana, 1990.
+
+\bibitem{bobal2006digital}
+V.~Bob{\'a}l, J.~B{\"o}hm, J.~Fessl  in J.~Mach{\'a}cek, {\em Digital
+  Self-tuning Controllers: Algorithms, Implementation and Applications}.
+\newblock Springer Science \& Business Media, 2006.
+
+\bibitem{S120PowerModule}
+Siemens, ``{SINAMICS S120 Booksize Power Units}.''
+
+\end{thebibliography}

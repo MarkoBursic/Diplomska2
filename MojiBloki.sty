@@ -1,0 +1,320 @@
+\tikzset{
+	controller/.style = {draw, fill=blue!20, rectangle, minimum height=3.5em, minimum width=6em},
+	subblock/.style= {draw, fill=blue!5, rectangle, minimum height=3.5em, minimum width=6em},
+	pidblocks/.style = {draw, fill=green!5, rectangle, minimum height=3.5em, minimum width=6em, text width= 6em},
+	sum/.style = {draw, circle, node distance=1cm, inner sep=0.15cm},
+	input/.style = {coordinate},
+	output/.style ={coordinate},
+	block/.style = {draw, fill=white, rectangle, minimum height=2em, minimum width=2em},
+	pinstyle/.style ={pin edge={to-,thin,black}},
+	dot/.style  = {anchor=base,fill,circle,inner sep=1pt}
+}
+
+\tikzset{%
+	saturation block/.style={%
+		draw, minimum size = 0.3cm,
+		path picture={
+			% Get the width and height of the path picture node
+			\pgfpointdiff{\pgfpointanchor{path picture bounding box}{south west}}%
+			{\pgfpointanchor{path picture bounding box}{north east}}
+			\pgfgetlastxy\x\y
+			% Scale the x and y vectors so that the range
+			% -1 to 1 is slightly shorter than the size of the node
+			\tikzset{x=\x*.4, y=\y*.4}
+			%
+			% Draw annotation
+			\draw [very thin] (-1,0) -- (1,0) (0,-1) -- (0,1); 
+			\draw [very thick] (-1,-.7) -- (-.7,-.7) -- (.7,.7) -- (1,.7);
+		},
+		append after command={\pgfextra{\let\mainnode=\tikzlastnode}
+			node[above right] at (\mainnode.north west) {#1}%
+		}	
+	}
+}
+
+\tikzset{%
+	Filt block/.style = {%
+		draw, minimum size = 0.8cm,
+		path picture={
+			% Get the width and height of the path picture node
+			\pgfpointdiff{\pgfpointanchor{path picture bounding box}{south west}}%
+			{\pgfpointanchor{path picture bounding box}{north east}}
+			\pgfgetlastxy\x\y
+			% Scale the x and y vectors so that the range
+			% -1 to 1 is slightly shorter than the size of the node
+			\tikzset{x=\x*.4, y=\y*.4}
+			%
+			% Draw annotation
+			\draw [very thin] (-1,-1) -- (-1,1) (-1,-1) -- (1,-1); 
+			\draw [very thick] (-0.95, -1) arc  [x radius =1.9, y radius = 1.4, start angle = 180,  end angle = 90] ;
+		},
+		append after command={\pgfextra{\let\mainnode=\tikzlastnode}
+			node[above right] at (\mainnode.north west) {#1}%
+		}
+	}	
+}
+
+\tikzset{%
+	Pctrl block/.style={%
+		draw, minimum size = 0.8cm,
+		path picture={
+			% Get the width and height of the path picture node
+			\pgfpointdiff{\pgfpointanchor{path picture bounding box}{south west}}%
+			{\pgfpointanchor{path picture bounding box}{north east}}
+			\pgfgetlastxy\x\y
+			% Scale the x and y vectors so that the range
+			% -1 to 1 is slightly shorter than the size of the node
+			\tikzset{x=\x*.4, y=\y*.4}
+			%
+			% Draw annotation
+			\draw [very thin] (-1,-1) -- (-1,1) (-1,-1) -- (1,-1); 
+			\draw [very thick] (-1,.4) -- (1,.4);
+		},
+		append after command={\pgfextra{\let\mainnode=\tikzlastnode}
+			node[above] at (\mainnode.north) {#1}%
+		}	
+	}
+}
+
+\tikzset{%
+	PIctrl block/.style={%
+		draw, minimum size = 0.8cm,
+		path picture={
+			% Get the width and height of the path picture node
+			\pgfpointdiff{\pgfpointanchor{path picture bounding box}{south west}}%
+			{\pgfpointanchor{path picture bounding box}{north east}}
+			\pgfgetlastxy\x\y
+			% Scale the x and y vectors so that the range
+			% -1 to 1 is slightly shorter than the size of the node
+			\tikzset{x=\x*.4, y=\y*.4}
+			%
+			% Draw annotation
+			\draw [very thin] (-1,-1) -- (-1,1) (-1,-1) -- (1,-1); 
+			\draw [very thick]   (-0.95,-1) -- (-0.95, -0.2) -- (0.9,.4);
+		},
+		append after command={\pgfextra{\let\mainnode=\tikzlastnode}
+			node[above] at (\mainnode.north) {#1}%
+		}	
+	}
+}
+
+\tikzset{%
+	Difer block/.style={%
+		draw, minimum size = 0.8cm,
+		path picture={
+			% Get the width and height of the path picture node
+			\pgfpointdiff{\pgfpointanchor{path picture bounding box}{south west}}%
+			{\pgfpointanchor{path picture bounding box}{north east}}
+			\pgfgetlastxy\x\y
+			% Scale the x and y vectors so that the range
+			% -1 to 1 is slightly shorter than the size of the node
+			\tikzset{x=\x*.4, y=\y*.4}
+			%
+			% Draw annotation
+			\draw [very thin] (-1,-1) -- (-1,1) (-1,-1) -- (1,-1); 
+			\draw [very thick] (-0.97,-1) -- (-0.97, 0.6);
+		},
+		append after command={\pgfextra{\let\mainnode=\tikzlastnode}
+			node[above right] at (\mainnode.north west) {#1}%
+		}				
+	}
+}
+
+\tikzset{%
+	Integ block/.style={%
+		draw, minimum size = 0.8cm,
+		path picture={
+			% Get the width and height of the path picture node
+			\pgfpointdiff{\pgfpointanchor{path picture bounding box}{south west}}%
+			{\pgfpointanchor{path picture bounding box}{north east}}
+			\pgfgetlastxy\x\y
+			% Scale the x and y vectors so that the range
+			% -1 to 1 is slightly shorter than the size of the node
+			\tikzset{x=\x*.4, y=\y*.4}
+			%
+			% Draw annotation
+			\draw [very thin] (-1,-1) -- (-1,1) (-1,-1) -- (1,-1);  
+			\draw [very thick] (-1,-1) -- (1, 1);
+		},
+		append after command={\pgfextra{\let\mainnode=\tikzlastnode}
+			node[above] at (\mainnode.north) {#1}%
+		}				
+	}
+}	
+
+\tikzset{%
+	Limit block/.style={%
+		fill = none, minimum size = 0.5cm,
+		path picture={
+			% Get the width and height of the path picture node
+			\pgfpointdiff{\pgfpointanchor{path picture bounding box}{south west}}%
+			{\pgfpointanchor{path picture bounding box}{north east}}
+			\pgfgetlastxy\x\y
+			% Scale the x and y vectors so that the range
+			% -1 to 1 is slightly shorter than the size of the node
+			\tikzset{x=\x*.4, y=\y*.4}
+			%
+			% Draw annotation
+			\draw [thick] (-1,1) -- (-0.8, 0.5) -- (0.8,0.5) -- (1,1);
+			\draw [thick] (-1,-1) -- (-0.8, -0.5) -- (0.8,-0.5) -- (1,-1);
+		},
+		append after command={\pgfextra{\let\mainnode=\tikzlastnode}
+			node[above] at (\mainnode.north) {#1}%
+		}				
+	}
+}			
+
+\tikzset{%
+	mul above/.style={%
+		draw, minimum size = 0.3cm,
+		path picture={
+			% Get the width and height of the path picture node
+			\pgfpointdiff{\pgfpointanchor{path picture bounding box}{south west}}%
+			{\pgfpointanchor{path picture bounding box}{north east}}
+			\pgfgetlastxy\x\y
+			% Scale the x and y vectors so that the range
+			% -1 to 1 is slightly shorter than the size of the node
+			%	\tikzset{x=\x*.4, y=\y*.4}
+			%
+			% Draw annotation
+			\draw [thick] (-1,-1) -- (1,1); 
+			\draw [thick] (-1,1) -- (1,-1);
+		},
+		append after command={\pgfextra{\let\mainnode=\tikzlastnode}
+			node[above](A1) at ([yshift=0.5cm]\mainnode.north) {#1}%
+			[->] (A1) edge (\mainnode.north)			   
+		},
+	}
+}
+
+\tikzset{%
+	mul below/.style={%
+		draw, minimum size = 0.3cm,
+		path picture={
+			% Get the width and height of the path picture node
+			\pgfpointdiff{\pgfpointanchor{path picture bounding box}{south west}}%
+			{\pgfpointanchor{path picture bounding box}{north east}}
+			\pgfgetlastxy\x\y
+			% Scale the x and y vectors so that the range
+			% -1 to 1 is slightly shorter than the size of the node
+			%	\tikzset{x=\x*.4, y=\y*.4}
+			%
+			% Draw annotation
+			\draw [thick] (-1,-1) -- (1,1); 
+			\draw [thick] (-1,1) -- (1,-1);
+		},
+		append after command={\pgfextra{\let\mainnode=\tikzlastnode}
+			node[below](A1) at ([yshift=-0.5cm]\mainnode.south) {#1}%
+			[->] (A1) edge (\mainnode.south)			   
+		},
+	}
+}
+
+\tikzset{%
+	mul left/.style={%
+		draw, minimum size = 0.3cm,
+		path picture={
+			% Get the width and height of the path picture node
+			\pgfpointdiff{\pgfpointanchor{path picture bounding box}{south west}}%
+			{\pgfpointanchor{path picture bounding box}{north east}}
+			\pgfgetlastxy\x\y
+			% Scale the x and y vectors so that the range
+			% -1 to 1 is slightly shorter than the size of the node
+			%	\tikzset{x=\x*.4, y=\y*.4}
+			%
+			% Draw annotation
+			\draw [thick] (-1,-1) -- (1,1); 
+			\draw [thick] (-1,1) -- (1,-1);
+		},
+		append after command={\pgfextra{\let\mainnode=\tikzlastnode}
+			node[left](A1) at ([xshift=-0.5cm]\mainnode.west) {#1}%
+			[->] (A1) edge (\mainnode.west)			   
+		},
+	}
+}	
+
+\tikzset{%
+	mul right/.style={%
+		draw, minimum size = 0.3cm,
+		path picture={
+			% Get the width and height of the path picture node
+			\pgfpointdiff{\pgfpointanchor{path picture bounding box}{south west}}%
+			{\pgfpointanchor{path picture bounding box}{north east}}
+			\pgfgetlastxy\x\y
+			% Scale the x and y vectors so that the range
+			% -1 to 1 is slightly shorter than the size of the node
+			%	\tikzset{x=\x*.4, y=\y*.4}
+			%
+			% Draw annotation
+			\draw [thick] (-1,-1) -- (1,1); 
+			\draw [thick] (-1,1) -- (1,-1);
+		},
+		append after command={\pgfextra{\let\mainnode=\tikzlastnode}
+			node[right](A1) at ([xshift=0.5cm]\mainnode.east) {#1}%
+			[->] (A1) edge (\mainnode.east)			   
+		},
+	}
+}
+\tikzset{%
+	notch block/.style={%
+		draw, minimum size = 0.8cm,
+		path picture={
+			% Get the width and height of the path picture node
+			\pgfpointdiff{\pgfpointanchor{path picture bounding box}{south west}}%
+			{\pgfpointanchor{path picture bounding box}{north east}}
+			\pgfgetlastxy\x\y
+			% Scale the x and y vectors so that the range
+			% -1 to 1 is slightly shorter than the size of the node
+			\tikzset{x=\x*.4, y=\y*.4}
+			%
+			% Draw annotation  
+			\draw [very thin] (-1,-1) -- (1,-1);  
+			\draw [thick] (-0.5, 0.8) arc  [x radius =0.4, y radius = 2.4, start angle = 90,  end angle =15] (-1, 0.8) -- (-0.5, 0.8)  ;
+			\draw [thick] (0.5, 0.8) arc  [x radius =0.4, y radius = 2.4, start angle = 90,  end angle = 165] (1, 0.8) -- (0.5, 0.8) ;
+		},
+		append after command={\pgfextra{\let\mainnode=\tikzlastnode}
+			node[above right] at (\mainnode.north west) {#1}%
+		}				
+	}
+}	
+\tikzset{%
+	bandstop block/.style={%
+		draw, minimum size = 0.8cm,
+		path picture={
+			% Get the width and height of the path picture node
+			\pgfpointdiff{\pgfpointanchor{path picture bounding box}{south west}}%
+			{\pgfpointanchor{path picture bounding box}{north east}}
+			\pgfgetlastxy\x\y
+			% Scale the x and y vectors so that the range
+			% -1 to 1 is slightly shorter than the size of the node
+			\tikzset{x=\x*.4, y=\y*.4}
+			%
+			% Draw annotation  
+			\draw [very thin] (-1,-1) -- (1,-1);  
+			\draw [thick] (-0.5, 0.8) arc  [x radius =0.8, y radius = 1.8, start angle = 90,  end angle =0] (-1, 0.8) -- (-0.5, 0.8)  ;
+		},
+		append after command={\pgfextra{\let\mainnode=\tikzlastnode}
+			node[above right] at (\mainnode.north west) {#1}%
+		}				
+	}
+}
+
+\tikzset{%
+	set gear dots/.style={
+		gear dots/.style={dash pattern=on 4pt off 4pt, dash phase=#1}},
+	set gear dots=0pt,
+	pics/gears/.style args={size #1 at (#2,#3) and size #4 at (#5,#6)}{code={
+			\tikzmath{%
+				\r1 = #1/2; \r2 = #4/2;
+				\gm = atan2(#3-#6, #2-#5);
+				\th = acos((\r1 == \r2) ? 0 : (\r2-\r1) / veclen(#5-#2, #6-#3));
+				coordinate \c, \t;
+				\c1 = (#2, #3); \t1 = (\c1) + (360-\th+\gm:\r1);
+				\c2 = (#5, #6); \t2 = (\c2) + (\th+\gm:\r2);
+			}
+			\draw [black!80, thick, fill=gray!25] (\c1) circle [radius=\r1];
+			\draw [black!80, thick, fill=gray!25] (\c2) circle [radius=\r2];
+			\draw [gray, ultra thick, postaction={draw=gray!50, gear dots, ultra thick}] 
+			(\t2) arc (\th+\gm:360-\th+\gm:\r2) -- 
+			(\t1) arc (360-\th+\gm:360+\th+\gm:\r1) -- cycle;
+		}}}

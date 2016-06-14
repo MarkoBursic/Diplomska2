@@ -1,0 +1,58 @@
+\select@language {slovene}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Osnovna zgradba Hall elementa}}{8}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Hall senzor z digitalnim izhodom}}{8}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Primerjava med unipolarno in bipolrano obilko histereze}}{9}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Zgradba resolverja}}{10}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Napetostni signali resolverja}}{11}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Blokovna shema metode Angle Tracking Observer}}{12}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Poenostavljena zgradba inkrementalnega dajalnika}}{13}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Disk inkrementalnega enkoderja}}{14}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Uklon na mre\IeC {\v z}ici}}{15}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Izhodni signali inkrementalnega enkoderja}}{15}
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Diferencialni oja\IeC {\v c}evalnik ima na izhodu sinusni signal}}{16}
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Metoda merjenja frekvence}}{16}
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Metoda merjenja periode}}{17}
+\contentsline {figure}{\numberline {2.14}{\ignorespaces Merilna enota Sin/Cos enkoderja }}{19}
+\contentsline {figure}{\numberline {2.15}{\ignorespaces Disk absolutnega enkoderja 10 prog}}{19}
+\contentsline {figure}{\numberline {2.16}{\ignorespaces Primer zgradbe ve\IeC {\v c}obratnega mehanskega \IeC {\v s}tevca}}{20}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Pogon s kolektorskim enosmernim tuje vzbujanim motorjem}}{23}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Vezni model tuje vzbuajnega enosmernega motorja}}{25}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Karakteristika navor/hitrost}}{27}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Blokovni diagram enosmernega motorja \cite {miljavec2009vezna}}}{27}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Kompleksni vektor statorskega toka \cite {LaTex}}}{29}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Clarkina preslikava trifaznega sistema v $\alpha \beta $ koordinatni sistem}}{30}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Parkova preslikava v $dq$ koordinatni sistem}}{31}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Inverzna Parkova preslikava iz $dq$ v $\alpha \beta $ koordinatni sistem}}{32}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Pre\IeC {\v c}ni prerez asinhornskega motorja s kratkosti\IeC {\v c}no kletko}}{33}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Tokovni pulzi zaradi parazitne kapacitivnosti kabla}}{34}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Du\IeC {\v s}ilka na izhodu iz frekven\IeC {\v c}nega pretvornika}}{35}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Mehanski reduktor}}{37}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Sklopljen sistem dveh vztrajnostnih mas}}{38}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Krmilni sistem}}{41}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Reguliran/zaprtozan\IeC {\v c}ni sistem}}{42}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Linearizacija sistema v delovni to\IeC {\v c}ki}}{42}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Kombiniran sistem}}{43}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Enostavna regulacija pozicije}}{45}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Kaskadna regulacija pozicije}}{45}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Vodena regulacija}}{47}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Digitalen regulator}}{47}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Vrste odziva na sko\IeC {\v c}no spremembo: stabilno, nestabilno, na meji stabilnosti}}{50}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Trapezni profil hitrosti}}{51}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces S-profil hitrosti}}{52}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Prikaz delovanja}}{56}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Karakteristike servo motorjev}}{57}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Vnos mehanskih podatkov}}{57}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Izra\IeC {\v c}unana karakteristika obremenitve/delovanja}}{58}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Vezava napajalnega modula \cite {S120PowerModule}}}{61}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Pozicijska zanka s kasnjenjem in feedforward }}{62}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Hitrostna zanka s kasnjenjem}}{62}
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Predpriprava tokovne zanke}}{63}
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Tokovni regulatorji q in d-osi}}{63}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
